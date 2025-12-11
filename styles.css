@@ -29,14 +29,17 @@ body{
     background-color: var(--background-color);
 }
 
+
 header{
     display: flex;
     flex-direction: row;
     gap: 30px;
     justify-content: space-between;
     margin: 20px 70px;
+   
 
 }
+
 
 .greeting{
     display: flex;
@@ -83,17 +86,75 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    
 }
 
-
+/* 
 .desc-text{
     text-align: center;
+    margin: 50px;
+    font-weight: 450;
+    font-size: 20px;
+} */
+
+.desc-img1, .desc-img4{
+    height: 200px;
+    transition: transform 0.3s ease-in-out; /* Плавный переход */
+}
+.desc-img2, .desc-img3, .desc-img5{
+    height: 300px;
+    transition: transform 0.3s ease-in-out; /* Плавный переход */
+}
+.desc-img1:hover, .desc-img2:hover, .desc-img3:hover, .desc-img4:hover, .desc-img5:hover{
+   transform: translateY(-40px); /* Сместить на 10px вверх */  }
+
+.desc-img1{
+    transform: rotate(-6deg);
+}
+.desc-img2{
+    transform: rotate(7deg);
+}
+.desc-img3{
+    transform: rotate(-6deg);
+}
+.desc-img4{
+    transform: rotate(4deg);
+    transition: transform 0.3s ease-in-out; /* Плавный переход */
+}
+
+.wrapped{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.desc-year{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.white-line{
+   height: 100px;
+   width: 100%;
+   background-color: white;
+   margin-top: -30px;
+    position: relative; /* Добавляем для большей предсказуемости */
+  z-index: 1; /* Чтобы быть поверх, если нужно */
+}
+
+/* .real-desc{
+    font-size: 24px;
+    text-align: left;
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 50px;
-    font-weight: 450;
-    font-size: 25px;
-}
+} */
+ .surv-text{
+    margin-top: 50px;
+    font-size: 24px;
+    margin-bottom: 50px;
+ }
 
 .survey{
     display: flex;
@@ -102,7 +163,8 @@ header{
     align-items: center;
 }
 
-.name, .age, .films, .sad-film, .shows, .artists, .songs, .line, .crash, .books, .meme, .cofee, .place, .sweet, .thought, .hobby, .throw, .happy, .sad, .moment, .friends{
+.name, .age, .films, .sad-film, .shows, .artists, .songs, .line, .crash, .books, .meme, .cofee, .place, .sweet, .thought, .hobby, .throw, .happy, .sad, .moment, .friends, 
+.sleep, .hero, .infp{
     display: flex;
     flex-direction: column;
 }
@@ -112,25 +174,35 @@ input[type=text] {
   padding: 8px;
   margin: 10px 0;
   box-sizing: border-box;
-  border-radius: 10px;
+  background-clip: padding-box;
+  border: none;
+  border-bottom: 1px solid #555;
+
+
 }
 
 input[type=text]:focus {
-  border: 1px solid #555;
+    border: none;
+    border-bottom: 1px solid #555;
+    outline: none;
 }
-
+/* 
 input[type=number] {
   width: 100%;
   padding: 8px;
   margin: 10px 0;
   box-sizing: border-box;
-  border-radius: 10px;
+  background-clip: padding-box;
+  border: none;
+   border-bottom: 1px solid #555;
   
 }
 
 input[type=number]:focus {
   border: 1px solid #555;
-}
+   border-bottom: 1px solid #555;
+    outline: none;
+} */
 
 .previous{
     display: flex;
@@ -158,7 +230,24 @@ input[type=number]:focus {
     display: flex;
     flex-direction: column;
 }
+.attention{
+width: 350px;
+}
 
+button{
+    height: 30px;
+    width: 100px;
+    margin: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #555;
+}
 
 @media(max-width: 768px){
     header{
@@ -176,6 +265,9 @@ input[type=number]:focus {
 }
 .greeting-text{
     font-size: 70px;
+}
+.desc-img1, .desc-img2, .desc-img3{
+    display: none;
 }
 
 }
@@ -198,6 +290,12 @@ input[type=number]:focus {
 }
 .contacts{
     gap: 50px;
+}
+.desc-img1, .desc-img2, .desc-img3, .desc-img4{
+    display: none;
+}
+.desc-img5{
+    transform: rotate(7deg);
 }
 }
 
@@ -232,4 +330,5 @@ input[type=number]:focus {
 .survey{
     margin: 30px;
 }
+
 }

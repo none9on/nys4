@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>new years survey</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/2.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     
 </head>
@@ -12,7 +15,7 @@
     <div class="container">
   <header>
             <div class="home">
-                <a href="#">logo</a>
+                <a class="logo-text" href="#">nys</a>
             </div>
             <div class="des">
                 <a href="#desc">о проекте</a>
@@ -37,42 +40,94 @@
 </div>
  <div class="site_desc" id="desc">
 
-        <h2 class="desc-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam eligendi adipisci praesentium mollitia eum ipsam enim ullam autem alias sequi delectus itaque aperiam numquam officia quis quas, porro quibusdam.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolorum veniam deleniti officiis a. Dolorem provident perspiciatis tenetur sequi incidunt, sunt amet tempora vel, nisi asperiores odit sit voluptas magnam.
-    </h2>
+        <div class="desc-text">
+            <p class="text-left">
+
+            </p>
+            <p class="text-right">
+                
+            </p>
+        </div>
+
+    <div class="desc-photos">
+        <img class="desc-img1" src="images/p1.jpg" alt="a">
+        <img class="desc-img2" src="images/p2.JPG" alt="films">
+        <img class="desc-img3" src="images/p3.jpg" alt="f">
+        <img class="desc-img4" src="images/p4.JPG" alt="f">
+        <img class="desc-img5" src="images/p5.jpg" alt="f">
     </div>
+    <div class="white-line">
+    </div>
+    <div class="desc-year">
+        <p class="wrapped">
+            2025 wrapped
+        </p>
+       <a href="#serv"><img src="images/arrow.svg" alt="" class="arrow"></a>
+    </div>
+    </div>
+<!-- 
+<div class="real-desc">
+    Добро пожаловать на новогодний опросник! Возможность для саморефлексии, ностальгии и подведения итогов 2025! Всех с наступающим новым годом и пусть удача всегда будет с вами!
+</div> -->
 
  <div class="survey" id="serv">
-       <div class="survey-questions">
-        <div class="name"> <label for="name">Имя</label><input type="text" id="name" name="name" size="20"> </div>
-        <div class="age"> <label for="age">возраст</label> <input type="number" id="age" name="age" size="20"> </div>
-        <div class="films"> <label for="films">либимые фильмы</label> <input type="text" id="films" name="films" size="20"> </div>
-        <div class="sad-film"> <label for="sad-film">самый грустный фильм</label> <input type="text" id="sad-film" name="sad-film" size="20"> </div>
-        <div class="shows"> <label for="shows">любимые сериалы</label> <input type="text" id="shows" name="shows" size="20"> </div>
-        <div class="artists"> <label for="artists">любимые музыкальные исполнители</label> <input type="text" id="artists" name="artists" size="20"> </div>
-        <div class="songs"> <label for="songs">любимые песни</label> <input type="text" id="songs" name="songs" size="20"> </div>
-        <div class="line"> <label for="line">любимая строчка из песни</label> <input type="text" id="line" name="line" size="20"> </div>
-        <div class="crash"> <label for="crash">краш/крашиха и nonbinary pals этого года!!</label> <input type="text" id="crash" name="crash" size="20"> </div>
-        <div class="books"> <label for="books">книги, которые вам понравились в этом году</label> <input type="text" id="books" name="books" size="20"> </div>
-        <div class="meme"> <label for="meme">мем года</label> <input type="text" id="meme" name="meme" size="20"> </div>
-        <div class="coffee"> <label for="coffee">ваш заказ в кофейне</label> <input type="text" id="coffee" name="coffee" size="20"> </div>
-        <div class="place"> <label for="place">место года</label> <input type="text" id="place" name="place" size="20"> </div>
-        <div class="sweet"> <label for="sweet">сладость года</label> <input type="text" id="sweet" name="sweet" size="20"> </div>
-        <div class="thought"> <label for="thought">мысль года</label> <input type="text" id="thought" name="thought" size="20"> </div>
-        <div class="hobby"> <label for="hobby">новые хобби в этом году?</label> <input type="text" id="hobby" name="hobby" size="20"> </div>
-        <div class="throw"> <label for="throw">от чего бы хотели избавиться в следующем году?</label> <input type="text" id="throw" name="throw" size="20"> </div>
-        <div class="happy"> <label for="happy">что делало вас счастливыми в этом году</label> <input type="text" id="happy" name="happy" size="20"> </div>
-        <div class="sad"> <label for="sad">от чего вам было грустно</label> <input type="text" id="sad" name="sad" size="20"> </div>
-        <div class="moment"> <label for="moment">момент, заповнившийся больше всего в этом году</label> <input type="text" id="moment" name="moment" size="20"> </div>
-        <div class="friends"> <label for="friends">ваши лучшие друзья!</label> <input type="text" id="friends" name="friends" size="20"> </div>
+    <p class="surv-text">
+        как я провел/а 2025:
+    </p>
+      <form class="survey-questions"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          id="survey-form">
 
-       </div>
+        <input type="hidden" name="access_key" value="71804806-8962-4580-8715-be0658f72973">
+
+
+
+        <div class="name"> <label for="name">Имя</label><input type="text" id="name" name="name" size="20"> </div>
+        <div class="age"> <label for="age">Возраст</label> <input type="text" id="age" name="age" size="20"> </div>
+        <div class="films"> <label for="films">Фильмы 2025</label> <input type="text" id="films" name="films" size="20"> </div>
+        <div class="sad-film"> <label for="sad-film">Самый грустный фильм этого года</label> <input type="text" id="sad-film" name="sad-film" size="20"> </div>
+        <div class="shows"> <label for="shows">Сериалы 2025</label> <input type="text" id="shows" name="shows" size="20"> </div>
+        <div class="artists"> <label for="artists">Музыкальные исполнители 2025</label> <input type="text" id="artists" name="artists" size="20"> </div>
+        <div class="songs"> <label for="songs">Лбимые песни</label> <input type="text" id="songs" name="songs" size="20"> </div>
+        <div class="line"> <label for="line">Любимая строчка из песни</label> <input type="text" id="line" name="line" size="20"> </div>
+        <div class="crash"> <label for="crash">Краш/крашиха года</label> <input type="text" id="crash" name="crash" size="20"> </div>
+        <div class="books"> <label for="books">Книги года</label> <input type="text" id="books" name="books" size="20"> </div>
+        <div class="meme"> <label for="meme">Мем года</label> <input type="text" id="meme" name="meme" size="20"> </div>
+        <div class="coffee"> <label for="coffee">Ваш заказ в кофейне</label> <input type="text" id="coffee" name="coffee" size="20"> </div>
+        <div class="place"> <label for="place">Место года</label> <input type="text" id="place" name="place" size="20"> </div>
+        <div class="sweet"> <label for="sweet">Сладость года</label> <input type="text" id="sweet" name="sweet" size="20"> </div>
+        <div class="thought"> <label for="thought">Мысль года</label> <input type="text" id="thought" name="thought" size="20"> </div>
+        <div class="hobby"> <label for="hobby">Новые хобби в этом году?</label> <input type="text" id="hobby" name="hobby" size="20"> </div>
+        <div class="throw"> <label for="throw">От чего бы хотели избавиться в следующем году?</label> <input type="text" id="throw" name="throw" size="20"> </div>
+        <div class="happy"> <label for="happy">Что делало вас счастливыми в этом году</label> <input type="text" id="happy" name="happy" size="20"> </div>
+        <div class="sad"> <label for="sad">От чего вам было грустно</label> <input type="text" id="sad" name="sad" size="20"> </div>
+        <div class="moment"> <label for="moment">Момент, заповнившийся больше всего в этом году</label> <input type="text" id="moment" name="moment" size="20"> </div>
+        <div class="sleep"> <label for="sleep">Сон года</label> <input type="text" id="sleep" name="sleep" size="20"> </div>
+        <div class="dish"> <label for="dish">Блюдо года</label> <input type="text" id="dish" name="dish" size="20"> </div>
+        <div class="hero"> <label for="hero">Героем какого фильма вы бы хотели стать</label> <input type="text" id="hero" name="hero" size="20"> </div>
+        <div class="infp"> <label for="infp">Ваш тип личности</label> <input type="text" id="infp" name="infp" size="20"> </div>
+       
+        <!-- <form>
+            <label for="city-select">Кофе или чай</label>
+            <select name="city" id="city-select">
+            <option value="">кофе</option>
+            <option value="petersburg">чай</option>
+            </select>
+        </form> -->
+
+
+        <div class="attention"><p>* Отправляя данную анкету, Вы соглашаетесь с тем, что данные этого опроса могут быть выложены в мой тгк в виде ссылки. Также Github Pages является публичным сайтом, поэтому, пожалуйста,
+            не оставляйте в анкете свои личные данные, которые можно использовать в злых целях.</p>
+        </div>
+            <button type="submit">Отправить</button>
+        </form>
     </div>
 
       <div class="previous" id="prev">
         <h2 class="previous-text">
-            Lorem ipsum dolor sit amet consectetur <a href="">Яндекс диск</a> elit. Vel est dolorem quasi atque nesciunt repellendus minus eligendi vero! Provident quo omnis commodi corrupti nemo neque, voluptas odio pariatur quidem! Voluptatibus.
+            
+        Вспомнить какими вы были в прошлых годах можно по <a href="">данной ссылке на Яндекс Диск.</a> Там же я позже размещу результаты опросника этого года!
         </h2>
     </div>
   <div class="contacts" id="cont">
@@ -84,5 +139,6 @@
         </div>
     </div>
     </div>
+    <script src="form.js"></script>
 </body>
 </html>
