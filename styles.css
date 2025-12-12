@@ -50,6 +50,8 @@ nav ul{
     align-items: center;
     gap: 30px;
    padding: 10px;
+   padding-left: 0px;
+    padding-right: 0px;
 }
 
 nav li{
