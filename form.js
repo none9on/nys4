@@ -62,3 +62,30 @@ function hideSidebar() {
     const sideBar = document.querySelector('.side-bar');
     sideBar.style.display = 'none';
 }
+
+
+function enableMobileStack() {
+    const container = document.querySelector(".mobile-stack");
+    if (!container) return;
+
+    let photos = Array.from(container.querySelectorAll("img"));
+
+    photos.forEach(img => {
+        img.addEventListener("click", () => {
+            let first = photos.shift();
+            photos.push(first);
+
+           
+            photos.forEach((img, i) => {
+                img.style.zIndex = photos.length - i;
+
+              
+            });
+        });
+    });
+}
+
+
+if (window.innerWidth <= 540) {
+    enableMobileStack();
+}

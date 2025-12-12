@@ -103,14 +103,6 @@ nav a{
 }
 
 
-/* .greeting{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 300px;
-} */
 .greeting-pic{
     height: 500px;
     margin-top: 10px; 
@@ -119,12 +111,9 @@ nav a{
 
 .greeting-text{
     font-size: 100px;
-    transition: transform 0.2s;
+   
 }
 
-.greeting-text:hover{
-    transform: scale(1.2);
-}
 
 
 .site_desc{
@@ -332,7 +321,26 @@ width: 100%;
 }
 
 
+@media(max-width: 1200px) {
+    .greeting-text{
+        font-size: 80px;
+    }
+    .greet-set{
+        gap: 50px;
+    }
+    .greeting-pic{
+        height: 400px;
+    }
+    .desc-img1{
+    display: none;
+}
+}
 
+@media(max-width: 930px){
+    .desc-img2{
+    display: none;
+}
+}
 
 
 @media(max-width: 800px){
@@ -405,12 +413,46 @@ width: 100%;
 .desc-img1, .desc-img2, .desc-img3, .desc-img4{
     display: none;
 }
-.desc-img5{
+/* .desc-img5{
     transform: rotate(7deg);
-}
+} */
 .side-bar{
     width: 100%;
 }
+
+.desc-img1, .desc-img2, .desc-img3, .desc-img4, .desc-img5{
+    display: block;
+}
+
+.mobile-stack {
+        position: relative;
+        width: 250px;
+        height: 350px;
+        margin: 0 auto;
+    }
+
+    .mobile-stack img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 350px;
+        object-fit: cover;
+        cursor: pointer;
+        object-fit: contain;
+
+        /* Плавная анимация */
+        transition: transform 0.4s ease, opacity 0.3s;
+    }
+
+    /* Разные наклоны — как у тебя */
+    .mobile-stack img:nth-child(1) { transform: rotate(-6deg); }
+    .mobile-stack img:nth-child(2) { transform: rotate(7deg); }
+    .mobile-stack img:nth-child(3) { transform: rotate(-4deg); }
+    .mobile-stack img:nth-child(4) { transform: rotate(5deg); }
+    .mobile-stack img:nth-child(5) { transform: rotate(-3deg); }
+
+
 }
 
 
@@ -453,5 +495,39 @@ width: 100%;
 .survey{
     margin: 30px;
 }
+.desc-img1, .desc-img2, .desc-img3, .desc-img4, .desc-img5{
+    display: block;
+}
+
+
+
+.mobile-stack {
+        position: relative;
+        width: 250px;
+        height: 350px;
+        margin: 0 auto;
+    }
+
+    .mobile-stack img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 350px;
+        object-fit: cover;
+        cursor: pointer;
+        object-fit: contain;
+
+        /* Плавная анимация */
+        transition: transform 0.4s ease, opacity 0.3s;
+    }
+
+    /* Разные наклоны — как у тебя */
+    .mobile-stack img:nth-child(1) { transform: rotate(-6deg); }
+    .mobile-stack img:nth-child(2) { transform: rotate(7deg); }
+    .mobile-stack img:nth-child(3) { transform: rotate(-4deg); }
+    .mobile-stack img:nth-child(4) { transform: rotate(5deg); }
+    .mobile-stack img:nth-child(5) { transform: rotate(-3deg); }
+
 
 }
