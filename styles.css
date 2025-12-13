@@ -226,6 +226,10 @@ nav a{
     
 }
 
+textarea{
+    font-size: 16px;
+}
+
 .name, .age, .films, .sad-film, .shows, .artists, .songs, .line, .crash, .books, .meme, .cofee, .place, .sweet, .thought, .hobby, .throw, .happy, .sad, .moment, .friends, 
 .sleep, .hero, .infp, .spowers, .dish{
     display: flex;
@@ -234,6 +238,7 @@ nav a{
 
 input[type=text] {
   width: 100%;
+  font-size: 16px;
   padding: 8px;
   margin: 10px 0;
   box-sizing: border-box;
@@ -340,6 +345,10 @@ width: 100%;
 .by{
     font-weight: 400;
 }
+
+
+
+
 
 
 @media(max-width: 1200px) {
