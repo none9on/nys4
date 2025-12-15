@@ -218,6 +218,14 @@ nav a{
     justify-content: center;
     align-items: center;
 }
+
+.form-part{
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+
+}
 .survey-questions{
     width: 30%;
     display: flex;

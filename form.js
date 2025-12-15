@@ -1,55 +1,3 @@
-// const form = document.getElementById('survey-form');
-// const inputs = form.querySelectorAll('input, select, textarea');
-// const submitBtn = form.querySelector('button[type="submit"]');
-
-
-// inputs.forEach(input => {
-//     const savedValue = localStorage.getItem(input.name);
-//     if (savedValue) {
-//         input.value = savedValue;
-//     }
-
-    
-//     input.addEventListener('input', () => {
-//         localStorage.setItem(input.name, input.value);
-//     });
-// });
-
-
-// form.addEventListener('submit', async (e) => {
-//     e.preventDefault(); 
-
-//     const formData = new FormData(form);
-
-//     const originalText = submitBtn.textContent;
-//     submitBtn.textContent = "Отправка...";
-//     submitBtn.disabled = true;
-
-//     try {
-//         const response = await fetch("https://api.web3forms.com/submit", {
-//             method: "POST",
-//             body: formData
-//         });
-
-//         const data = await response.json();
-
-//         if (response.ok) {
-//             alert("Анкета отправлена! Спасибо!");
-//             form.reset();
-
-            
-//             inputs.forEach(input => localStorage.removeItem(input.name));
-//         } else {
-//             alert("Ошибка: " + data.message);
-//         }
-
-//     } catch (error) {
-//         alert("Что-то пошло не так. Попробуйте еще раз.");
-//     } finally {
-//         submitBtn.textContent = originalText;
-//         submitBtn.disabled = false;
-//     }
-// });
 
 
 function showSidebar() {
@@ -127,7 +75,7 @@ document.querySelectorAll('.next-btn').forEach(button => {
     });
 });
 
-// Последняя часть - submit
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const lastPart = document.getElementById('part3');
@@ -151,6 +99,67 @@ form.addEventListener('submit', async (e) => {
         if (result.success) {
             document.getElementById('success-message').style.display = 'block';
             lastPart.querySelector('button[type="submit"]').style.display = 'none';
+        } else {
+            console.log(result);
+            alert('Ошибка при отправке, попробуйте снова');
+        }
+    } catch (error) {
+        console.error(error);
+        alert('Ошибка сети, попробуйте снова');
+    }
+});
+
+
+function saveToLocalStorage(input) {
+    if(input.name) {
+        localStorage.setItem(input.name, input.value);
+    }
+}
+
+
+function loadFromLocalStorage() {
+    document.querySelectorAll('input, textarea').forEach(input => {
+        if(input.name && localStorage.getItem(input.name)) {
+            input.value = localStorage.getItem(input.name);
+        }
+    });
+}
+
+
+document.querySelectorAll('input, textarea').forEach(input => {
+    input.addEventListener('input', () => saveToLocalStorage(input));
+});
+
+window.addEventListener('DOMContentLoaded', loadFromLocalStorage);
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const lastPart = document.getElementById('part3');
+
+    const formData = new FormData();
+    lastPart.querySelectorAll('input, textarea').forEach(input => {
+        if(input.value.trim() !== '') {
+            formData.append(input.name, input.value);
+        }
+    });
+    formData.append('access_key', '046ab3ea-c2ac-4eee-a29d-da90b2750ab1');
+
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            document.getElementById('success-message').style.display = 'block';
+            lastPart.querySelector('button[type="submit"]').style.display = 'none';
+
+          
+            document.querySelectorAll('input, textarea').forEach(input => {
+                localStorage.removeItem(input.name);
+            });
         } else {
             console.log(result);
             alert('Ошибка при отправке, попробуйте снова');
