@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     
 </head>
+
+
+
 <body>
     <div class="container">
        <nav>
@@ -68,80 +71,54 @@
        <a href="#serv"><img src="images/arrow.svg" alt="" class="arrow"></a>
     </div>
     </div>
-<!-- 
-<div class="real-desc">
-    Добро пожаловать на новогодний опросник! Возможность для саморефлексии, ностальгии и подведения итогов 2025! Всех с наступающим новым годом и пусть удача всегда будет с вами!
-</div> -->
 
  <div class="survey" id="serv">
     <p class="surv-text">
         анкета 2025:
     </p>
-      <form class="survey-questions"
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          id="survey-form">
+      <form class="survey-questions" id="survey-form">
 
-        <input type="hidden" name="access_key" value="046ab3ea-c2ac-4eee-a29d-da90b2750ab1">
+        <div class="name"> <label for="name">Имя</label><input placeholder="ксюша" type="text" id="name" name="name" maxlength="50"> </div>
+        <div class="age"> <label for="age">Возраст</label> <input placeholder="22" type="text" id="age" name="age" maxlength="50"> </div>
+        <div class="films"> <label for="films">Фильмы 2025</label> <textarea placeholder="superman, wolfwalkers, perfect blue, lisa frankenstein, хорошо быть тихоней, mysterious skin, little miss sushine, atonoment, how to lose a guy in 10 days, 10 things i hate about you, boyhood, humanist vampire seeking consenting suicidal person, cars" id="films" name="films" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="sad-film"> <label for="sad-film">Самый грустный фильм этого года</label> <input placeholder="наверно aftersun" type="text" id="sad-film" name="sad-film" maxlength="200"></div>
+        <div class="shows"> <label for="shows">Сериалы 2025</label> <textarea placeholder="little big lies, we were liars, teen wolf 3 сезон, your friendly neighbourhood spider man" id="shows" name="shows" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="artists"> <label for="artists">Любимые музыкальные исполнители</label> <textarea placeholder="оо в этом году я много слушала мака миллера, hozier, childish gambino, альбом намджуна просто разъеб для меня был, таннисы, charli xcx, ле серафим" id="artists" name="artists" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="songs"> <label for="songs">Любимые песни</label> <textarea placeholder="вспомнила в этом году песни из виолетты, oh wonder - without you, rm - lost, le sserafim - come over, stateside+zara larsson - pinkpantheress, slowdancing (piano ver!) -v, hozier - work song, bts - rain и тд и тп" id="songs" name="songs" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="line"> <label for="line">Любимая строчка из песни</label> <textarea placeholder="тренд в тт со строчкой She got ironic tattoos on her back. That ain't ironic bitch, I love Rugrats я просто оч хочу тату на спинееее" id="line" name="line"  rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="crash"> <label for="crash">Краш/крашиха года</label> <textarea placeholder="блин как-то все сразу из головы испарились.. джозеф зада в wwl! как он плачеееееттт сори я люблю когда мужчины плачут ХАХАХ" id="crash" name="crash" maxlength="800"></textarea> </div>
+        <div class="books"> <label for="books">Любимая книга</label> <textarea placeholder="по-прежнему моя любимая книга это убить пересмешника, но из прочитанного мной в этом году я бы выделила нагори: тоска по уходящему сезону и грозовой перевал" id="books" name="books"  rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="meme"> <label for="meme">Мем года</label> <textarea placeholder="мне нравится звук в тт юлка може i пиздила гроши але i людям давала пиздити i жили нармальна" id="meme" name="meme" maxlength="800"></textarea></div>
+        <div class="coffee"> <label for="coffee">Ваш заказ в кофейне</label> <textarea placeholder="латте с мятным сиропом, эспрессо-тоник и бамбл" id="coffee" name="coffee"  rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="place"> <label for="place">Место года</label> <textarea placeholder="ну тут не поспоришь грузия" id="place" name="place" maxlength="800"></textarea> </div>
+        <div class="sweet"> <label for="sweet">Сладость года</label> <textarea placeholder="в кб продаются турецкие шоколадки лавива (только не с темной начинкой, а с белой!)" id="sweet" name="sweet" maxlength="800"></textarea></div>
+         <div class="thought"> <label for="thought">Мысль года</label> <textarea placeholder="нужно полагаться только на себя и когда уже станет лучше извините это крик души" id="thought" name="thought" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="hobby"> <label for="hobby">Новое хобби в этом году?</label> <textarea placeholder="да как-то в этом году новых прям хобби и не появилось... правда я узнала термин фланирование, всю весну я мьютила научрука и нахаживала по окрестностям ду по 15к шагов" id="hobby" name="hobby" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="throw"> <label for="throw">От чего бы хотели избавиться в следующем году?</label> <textarea placeholder="шутка от себя не в счет, я бы хотела избавиться от чувства тревожности и потерянности а еще может быть от одежды, которая мне не нравится" id="throw" name="throw" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="buy"> <label for="buy">Что бы вы хотели приобрести в следующем году?</label> <textarea placeholder="спокойствие умиротворение и мб обновить свой гардероб и билеты на концик бтс" id="buy" name="buy" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="happy"> <label for="happy">Что делало вас счастливыми в этом году</label> <textarea placeholder="хорошая погода, когда светит солнце, путешествия и от7 фото таннисов лол" id="happy" name="happy" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="sad"> <label for="sad">От чего вам было грустно</label> <textarea placeholder="от неопределенности в своей жизни" id="sad" name="sad" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="moment"> <label for="moment">Момент, запомнившийся больше всего в этом году</label> <textarea placeholder="как мы с лизой шли пешком и обратно от ее дома до фабрики... атмосфера летней ночи в другой стране" id="moment" name="moment" rows="4" cols="40" maxlength="800"></textarea> </div>
+        <div class="sleep"> <label for="sleep">Самый странный сон года</label> <textarea placeholder="прямая цитата из папки с заметками моих снов 10 апреля: мы были в баре я пошла в туалет, он был очень маленький и там на полках лежали какие-то препараты с российскими старыми певицами и всё было на китайском и это были таблетки от глистов" id="sleep" name="sleep" rows="4" cols="40" maxlength="900"></textarea></div>
+        <div class="spowers"> <label for="spowers">Какие суперсилы вы бы хотели иметь</label> <textarea placeholder="телепортация: никаких виз никаких перелетов, секунда и ты уже в другом месте" id="spowers" name="spowers" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="dish"> <label for="dish">Блюдо года</label> <textarea placeholder="хачапури по аджарски в той кафешке в батуми я отвечаю у меня случился оргазм буквально от одного куска" id="dish" name="dish" maxlength="800"></textarea></div>
+        <div class="trop"> <label for="trop">Ваш любимый троп</label> <textarea placeholder="так ну я точно люблю от enemies to lovers но чтобы реально был hate love, если про friends to lovers, но только если кто-то уже был влюбен, люблю университетские аушки, псевдоисторические сеттинги только если это что-то в духе бронте или джейн остен, И ДЕТЕКТИВЫ ЛЮБЛЮ  как же их люблю вы бы знали" id="trop" name="trop" maxlength="800"></textarea></div>
+        <div class="infp"> <label for="infp">Ваш тип личности</label> <textarea placeholder="в последний раз я была посредником - infp" id="infp" name="infp" maxlength="400"></textarea></div>
+        <div class="vids"> <label for="vids">Какие видео вы смотрите на ютубе</label> <textarea placeholder="видосы с йогой, правило 34, иногда стендапы, калинкина и касьян и еще слушаю хаус миксы от рандомных людей" id="vids" name="vids"  rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="hero"> <label for="hero">Героем какого фильма/сериала вы бы хотели стать</label> <textarea placeholder="ну так подумать было бы прик попасть в человека паука ака майлз моралес этот весь прикольный нй и конечно в 3 сезон волчонка и скам" id="hero" name="hero"  rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="hor"> <label for="hor">Читатете ли вы гороскопы</label> <textarea placeholder="бывает, когда тревожно и надо посмотреть что меня ждет (не то что бы я верю сильно в них...)" id="hor" name="hor" maxlength="800"></textarea></div>
+        <div class="afraid"> <label for="vids">Ваш самый большой страх</label> <textarea placeholder="наверно нереализоваться в жизни никак хаха" id="afraid" name="afraid" maxlength="800"></textarea></div>
+        <div class="princess"> <label for="princess">Лучшая диснеевская принцесса</label> <textarea placeholder="мне нравятся мулан и принцесса тиана" id="princess" name="princess" maxlength="500"></textarea></div>
+        <div class="prince"> <label for="prince">Лучший диснеевский принц</label> <textarea placeholder="ЛИ ШАНГ из мулан" id="prince" name="prince" maxlength="500"></textarea></div>
+         <div class="island"> <label for="island">3 вещи, которые вы бы взяли на необитаемый остров</label> <textarea placeholder="сложный вопрос но кстати про сериалы я бы не хотела оказаться в шершнях (нуу не считая того что у них там очень привлекательная женская команда по футболу...)" id="island" name="island" rows="4" cols="40" maxlength="800"></textarea></div>
+         <div class="wish"> <label for="wish">Пожелание себе на 2026</label> <textarea placeholder="я желаю себе очень очень сильно покоя умиротворения удовлетворения и билетов на концик бантан" id="wish" name="wish" rows="4" cols="40" maxlength="800"></textarea></div>
+        <div class="rate"> <label for="rate">Оцениваем 2025 (шкалу придумайте сами)</label> <textarea placeholder="6 только из-за получения диплома грузии и турции" id="rate" name="rate" maxlength="500"></textarea></div>
         
-        <div class="form-part" id="part1">
-        
-        <div class="name"> <label for="name">Имя</label><input placeholder="ксюша" type="text" id="name" name="name"> </div>
-        <div class="age"> <label for="age">Возраст</label> <input placeholder="22" type="text" id="age" name="age"> </div>
-        <div class="films"> <label for="films">Фильмы 2025</label> <textarea placeholder="superman, wolfwalkers, perfect blue, lisa frankenstein, хорошо быть тихоней, mysterious skin, little miss sushine, atonoment, how to lose a guy in 10 days, 10 things i hate about you, boyhood, humanist vampire seeking consenting suicidal person, cars" id="films" name="films" rows="4" cols="40"></textarea></div>
-        <div class="sad-film"> <label for="sad-film">Самый грустный фильм этого года</label> <input placeholder="наверно aftersun" type="text" id="sad-film" name="sad-film"></div>
-        <div class="shows"> <label for="shows">Сериалы 2025</label> <textarea placeholder="little big lies, we were liars, teen wolf 3 сезон, your friendly neighbourhood spider man" id="shows" name="shows" rows="4" cols="40"></textarea>  </div>
-        <div class="artists"> <label for="artists">Любимые музыкальные исполнители</label> <textarea placeholder="оо в этом году я много слушала мака миллера, hozier, childish gambino, альбом намджуна просто разъеб для меня был, таннисы, charli xcx, ле серафим" id="artists" name="artists" rows="4" cols="40"></textarea></div>
-        <div class="songs"> <label for="songs">Любимые песни</label> <textarea placeholder="вспомнила в этом году песни из виолетты, oh wonder - without you, rm - lost, le sserafim - come over, stateside+zara larsson - pinkpantheress, slowdancing (piano ver!) -v, hozier - work song, bts - rain и тд и тп" id="songs" name="songs" rows="4" cols="40"></textarea></div>
-        <div class="line"> <label for="line">Любимая строчка из песни</label> <textarea placeholder="тренд в тт со строчкой She got ironic tattoos on her back. That ain't ironic bitch, I love Rugrats я просто оч хочу тату на спинееее" id="line" name="line"  rows="4" cols="40"></textarea></div>
-        <div class="crash"> <label for="crash">Краш/крашиха года</label> <textarea placeholder="блин как-то все сразу из головы испарились.. джозеф зада в wwl! как он плачеееееттт сори я люблю когда мужчины плачут ХАХАХ" id="crash" name="crash"></textarea> </div>
-        <div class="books"> <label for="books">Любимая книга</label> <textarea placeholder="по-прежнему моя любимая книга это убить пересмешника, но из прочитанного мной в этом году я бы выделила нагори: тоска по уходящему сезону и грозовой перевал" id="books" name="books"  rows="4" cols="40"></textarea></div>
-        <div class="meme"> <label for="meme">Мем года</label> <textarea placeholder="мне нравится звук в тт юлка може i пиздила гроши але i людям давала пиздити i жили нармальна" id="meme" name="meme"></textarea></div>
-        <div class="coffee"> <label for="coffee">Ваш заказ в кофейне</label> <textarea placeholder="латте с мятным сиропом, эспрессо-тоник и бамбл" id="coffee" name="coffee"  rows="4" cols="40"></textarea></div>
-         <button type="button" class="next-btn" data-next="part2">Далее</button>
-    </div>
-      
-      
-      <div class="form-part" id="part2"  style="display:none;">
-        <div class="place"> <label for="place">Место года</label> <textarea placeholder="ну тут не поспоришь грузия" id="place" name="place"></textarea> </div>
-        <div class="sweet"> <label for="sweet">Сладость года</label> <textarea placeholder="в кб продаются турецкие шоколадки лавива (только не с темной начинкой, а с белой!)" id="sweet" name="sweet"></textarea></div>
-         <div class="thought"> <label for="thought">Мысль года</label> <textarea placeholder="нужно полагаться только на себя и когда уже станет лучше извините это крик души" id="thought" name="thought" rows="4" cols="40"></textarea></div>
-        <div class="hobby"> <label for="hobby">Новое хобби в этом году?</label> <textarea placeholder="да как-то в этом году новых прям хобби и не появилось... правда я узнала термин фланирование, всю весну я мьютила научрука и нахаживала по окрестностям ду по 15к шагов" id="hobby" name="hobby" rows="4" cols="40"></textarea></div>
-        <div class="throw"> <label for="throw">От чего бы хотели избавиться в следующем году?</label> <textarea placeholder="шутка от себя не в счет, я бы хотела избавиться от чувства тревожности и потерянности а еще может быть от одежды, которая мне не нравится" id="throw" name="throw" rows="4" cols="40"></textarea></div>
-        <div class="buy"> <label for="buy">Что бы вы хотели приобрести в следующем году?</label> <textarea placeholder="спокойствие умиротворение и мб обновить свой гардероб и билеты на концик бтс" id="buy" name="buy" rows="4" cols="40"></textarea></div>
-        <div class="happy"> <label for="happy">Что делало вас счастливыми в этом году</label> <textarea placeholder="хорошая погода, когда светит солнце, путешествия и от7 фото таннисов лол" id="happy" name="happy" rows="4" cols="40"></textarea></div>
-        <div class="sad"> <label for="sad">От чего вам было грустно</label> <textarea placeholder="от неопределенности в своей жизни" id="sad" name="sad" rows="4" cols="40"></textarea></div>
-        <div class="moment"> <label for="moment">Момент, запомнившийся больше всего в этом году</label> <textarea placeholder="как мы с лизой шли пешком и обратно от ее дома до фабрики... атмосфера летней ночи в другой стране" id="moment" name="moment" rows="4" cols="40"></textarea> </div>
-        <div class="sleep"> <label for="sleep">Самый странный сон года</label> <textarea placeholder="прямая цитата из папки с заметками моих снов 10 апреля: мы были в баре я пошла в туалет, он был очень маленький и там на полках лежали какие-то препараты с российскими старыми певицами и всё было на китайском и это были таблетки от глистов" id="sleep" name="sleep" rows="4" cols="40"></textarea></div>
-        <div class="spowers"> <label for="spowers">Какие суперсилы вы бы хотели иметь</label> <textarea placeholder="телепортация: никаких виз никаких перелетов, секунда и ты уже в другом месте" id="spowers" name="spowers" rows="4" cols="40"></textarea></div>
-        <div class="dish"> <label for="dish">Блюдо года</label> <textarea placeholder="хачапури по аджарски в той кафешке в батуми я отвечаю у меня случился оргазм буквально от одного куска" id="dish" name="dish"></textarea></div>
-            <button type="button" class="next-btn" data-next="part3">Далее</button>
-    </div>
-
-         <div class="form-part" id="part3"  style="display:none;">
-
-        <div class="trop"> <label for="trop">Ваш любимый троп</label> <textarea placeholder="так ну я точно люблю от enemies to lovers но чтобы реально был hate love, если про friends to lovers, но только если кто-то уже был влюбен, люблю университетские аушки, псевдоисторические сеттинги только если это что-то в духе бронте или джейн остен, И ДЕТЕКТИВЫ ЛЮБЛЮ  как же их люблю вы бы знали" id="trop" name="trop"></textarea></div>
-        <div class="infp"> <label for="infp">Ваш тип личности</label> <textarea placeholder="в последний раз я была посредником - infp" id="infp" name="infp"></textarea></div>
-        <div class="vids"> <label for="vids">Какие видео вы смотрите на ютубе</label> <textarea placeholder="видосы с йогой, правило 34, иногда стендапы, калинкина и касьян и еще слушаю хаус миксы от рандомных людей" id="vids" name="vids"  rows="4" cols="40"></textarea></div>
-        <div class="hero"> <label for="hero">Героем какого фильма/сериала вы бы хотели стать</label> <textarea placeholder="ну так подумать было бы прик попасть в человека паука ака майлз моралес этот весь прикольный нй и конечно в 3 сезон волчонка и скам" id="hero" name="hero"  rows="4" cols="40"></textarea></div>
-        <div class="hor"> <label for="hor">Читатете ли вы гороскопы</label> <textarea placeholder="бывает, когда тревожно и надо посмотреть что меня ждет (не то что бы я верю сильно в них...)" id="hor" name="hor"></textarea></div>
-        <div class="afraid"> <label for="vids">Ваш самый большой страх</label> <textarea placeholder="наверно нереализоваться в жизни никак хаха" id="afraid" name="afraid"></textarea></div>
-        <div class="princess"> <label for="princess">Лучшая диснеевская принцесса</label> <textarea placeholder="мне нравятся мулан и принцесса тиана" id="princess" name="princess"></textarea></div>
-        <div class="prince"> <label for="prince">Лучший диснеевский принц</label> <textarea placeholder="ЛИ ШАНГ из мулан" id="prince" name="prince"></textarea></div>
-         <div class="island"> <label for="island">3 вещи, которые вы бы взяли на необитаемый остров</label> <textarea placeholder="сложный вопрос но кстати про сериалы я бы не хотела оказаться в шершнях (нуу не считая того что у них там очень привлекательная женская команда по футболу...)" id="island" name="island" rows="4" cols="40"></textarea></div>
-         <div class="wish"> <label for="wish">Пожелание себе на 2026</label> <textarea placeholder="я желаю себе очень очень сильно покоя умиротворения удовлетворения и билетов на концик бантан" id="wish" name="wish" rows="4" cols="40"></textarea></div>
-        <div class="rate"> <label for="rate">Оцениваем 2025 (шкалу придумайте сами)</label> <textarea placeholder="6 только из-за получения диплома грузии и турции" id="rate" name="rate"></textarea></div>
-            <button type="submit">Отправить</button>
-        <div id="success-message" style="display:none; color:green; margin-top:10px;">
-            Спасибо! Ваша анкета отправлена.
-        </div>
-    </div>
-        
+         <div class="attention"><p>* Нажимая на кнопку "Отправить", Вы соглашаетесь с размещением результатов данной анкеты в моем тгк!</p>
+       
+            <button type="submit">Отправить</button></div>
     
 
-        <!-- <div class="attention"><p>* Нажимая на кнопку "Отправить", Вы соглашаетесь с размещением результатов данной анкеты в моем тгк!</p> -->
-       
-            <!-- <button type="submit">Отправить</button> -->
         </form>
     </div>
 
@@ -150,7 +127,6 @@
         <h2 class="previous-text">
        Всех с наступающим 2026 годом! Пусть в новом году вам этот мир будет уже абосолютно понятен и у вас будет покой, умиротворение, гармония и мирное небо над головой! Надеюсь 2026 принесет вам много ярких, приятных и счастливых эмоций! Предыдущие анкеты (за 2023 и 2024) можно посмотреть <a class="prev-l" href="https://disk.yandex.ru/d/SBkzY22tnpXXFg">по данной ссылке!</a> 
         </h2>
-        <!-- <a href="https://disk.yandex.ru/d/SBkzY22tnpXXFg"><button class="prev-but">Прошлые анкеты!</button></a> -->
         </div>
         <div class="prev-photo">
             <img class="prev-pic" src="images/pr.webp" alt="previous">
@@ -160,6 +136,10 @@
         <h1 class="by">by none9on</h1>
     </div>
     </div>
-    <script src="form.js"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="form.js"></script>
+
+
 </body>
 </html>
